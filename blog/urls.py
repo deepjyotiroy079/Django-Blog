@@ -7,6 +7,7 @@ Here we're importing Django's function path and all of our views from the blog a
 urlpatterns = [
     path('', views.post_list, name='post_list'), # views.post_list is the name of the view
     # name='post_list' is the name of the url
+    path('post/<int:pk>/', views.post_details, name='post_details'),
 ]
 """
 As you can see, we're now assigning a view called post_list to the root URL.
